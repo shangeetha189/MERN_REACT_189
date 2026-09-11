@@ -1,0 +1,335 @@
+.register-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(229, 0, 131, 0.18),
+      transparent 35%
+    ),
+    #080808;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+
+.register-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.register-circle.circle-one {
+  width: 330px;
+  height: 330px;
+
+  background: rgba(229, 0, 131, 0.12);
+
+  top: -130px;
+  right: -80px;
+
+  filter: blur(5px);
+}
+
+
+.register-circle.circle-two {
+  width: 280px;
+  height: 280px;
+
+  background: rgba(120, 0, 255, 0.1);
+
+  bottom: -120px;
+  left: -80px;
+
+  filter: blur(5px);
+}
+
+
+.register-card {
+  width: 470px;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background: rgba(20, 20, 20, 0.9);
+
+  border: 1px solid rgba(229, 0, 131, 0.35);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(229, 0, 131, 0.08);
+
+  backdrop-filter: blur(18px);
+
+  color: white;
+
+  z-index: 2;
+}
+
+
+.register-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 17px;
+
+  background: #e50083;
+
+  box-shadow:
+    0 10px 35px rgba(229, 0, 131, 0.3);
+}
+
+
+.register-icon svg {
+  font-size: 29px;
+}
+
+
+.register-card h1 {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 30px;
+}
+
+
+.register-subtitle {
+  margin: 8px 0 27px;
+
+  text-align: center;
+
+  color: #999;
+
+  font-size: 14px;
+}
+
+
+.register-card form {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.register-card label {
+  margin-bottom: 7px;
+
+  color: #ddd;
+
+  font-size: 14px;
+}
+
+
+.register-input {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 17px;
+
+  padding: 0 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #333;
+
+  border-radius: 10px;
+
+  background: #111;
+
+  transition: 0.25s;
+}
+
+
+.register-input:focus-within {
+  border-color: #e50083;
+
+  box-shadow:
+    0 0 0 3px rgba(229, 0, 131, 0.1);
+}
+
+
+.register-input > svg {
+  color: #e50083;
+}
+
+
+.register-input input {
+  flex: 1;
+
+  height: 100%;
+
+  outline: none;
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 14px;
+}
+
+
+.register-input input::placeholder {
+  color: #777;
+}
+
+
+.register-password-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #888;
+
+  cursor: pointer;
+}
+
+
+.register-password-toggle:hover {
+  color: #e50083;
+}
+
+
+.register-submit {
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #e50083;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+
+.register-submit:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(229, 0, 131, 0.3);
+}
+
+
+.register-submit:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+.register-divider {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 24px 0 18px;
+
+  color: #666;
+
+  font-size: 11px;
+}
+
+
+.register-divider::before,
+.register-divider::after {
+  content: '';
+
+  flex: 1;
+
+  height: 1px;
+
+  background: #333;
+}
+
+
+.login-switch {
+  margin: 0;
+
+  text-align: center;
+
+  color: #999;
+
+  font-size: 14px;
+}
+
+
+.login-switch a {
+  margin-left: 6px;
+
+  color: #e50083;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+
+.login-switch a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 520px) {
+
+  .register-page {
+    padding: 18px;
+  }
+
+  .register-card {
+    width: 100%;
+
+    padding: 30px 22px;
+
+    border-radius: 20px;
+  }
+
+}

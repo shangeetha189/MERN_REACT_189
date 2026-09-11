@@ -1,0 +1,410 @@
+.favorites-page {
+  min-height: calc(100vh - 70px);
+  padding: 55px 7%;
+  box-sizing: border-box;
+  background: #090909;
+  color: white;
+}
+
+.favorites-wrapper {
+  max-width: 1150px;
+  margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #252525;
+}
+
+.favorites-title-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.favorites-title-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  background: #e6007e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 35px rgba(230, 0, 126, 0.3);
+}
+
+.favorites-title-icon svg {
+  font-size: 34px;
+  color: white;
+}
+
+.favorites-label {
+  color: #e6007e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.favorites-header h1 {
+  margin: 6px 0 5px;
+  color: white;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.favorites-header p {
+  margin: 0;
+  color: #858585;
+  font-size: 15px;
+}
+
+
+/* =========================
+   COUNT
+========================= */
+
+.favorites-count {
+  min-width: 100px;
+  padding: 14px 20px;
+  border: 1px solid #303030;
+  border-radius: 14px;
+  background: #111111;
+  text-align: center;
+}
+
+.favorites-count span {
+  display: block;
+  color: #777;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.favorites-count strong {
+  display: block;
+  color: #e6007e;
+  font-size: 25px;
+  margin-top: 3px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.favorites-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.favorite-card {
+  position: relative;
+  min-height: 290px;
+  padding: 25px;
+  box-sizing: border-box;
+
+  background: #111111;
+
+  border: 1px solid #292929;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.favorite-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e6007e;
+}
+
+.favorite-card:hover {
+  transform: translateY(-7px);
+  border-color: #e6007e;
+  box-shadow: 0 18px 40px rgba(230, 0, 126, 0.12);
+}
+
+
+/* =========================
+   CARD TOP
+========================= */
+
+.favorite-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-number {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 11px;
+
+  background: #1d1d1d;
+  border: 1px solid #333;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.heart-badge {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: rgba(230, 0, 126, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-badge svg {
+  color: #e6007e;
+  font-size: 23px;
+}
+
+
+/* =========================
+   NOTE CONTENT
+========================= */
+
+.favorite-content {
+  flex: 1;
+  padding-top: 25px;
+}
+
+.saved-label {
+  color: #e6007e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.favorite-content h2 {
+  color: white;
+  font-size: 23px;
+  margin: 10px 0 12px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.favorite-content p {
+  color: #8c8c8c;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* =========================
+   CARD FOOTER
+========================= */
+
+.favorite-card-footer {
+  padding-top: 20px;
+  margin-top: 20px;
+
+  border-top: 1px solid #262626;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.favorite-card-footer span {
+  color: #666;
+  font-size: 12px;
+}
+
+
+/* =========================
+   REMOVE BUTTON
+========================= */
+
+.remove-favorite {
+  border: 1px solid rgba(230, 0, 126, 0.4);
+
+  background: #e6007e;
+  color: white;
+
+  padding: 9px 13px;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: 0.25s;
+}
+
+.remove-favorite svg {
+  font-size: 17px;
+}
+
+.remove-favorite:hover {
+  background: #c9006f;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   EMPTY FAVORITES
+========================= */
+
+.empty-favorites {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 55px 45px;
+
+  box-sizing: border-box;
+
+  background: #111111;
+
+  border: 1px solid #292929;
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.empty-heart-container {
+  width: 80px;
+  height: 80px;
+
+  margin: 0 auto 25px;
+
+  border-radius: 50%;
+
+  background: rgba(230, 0, 126, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-heart {
+  color: #e6007e !important;
+  font-size: 43px !important;
+}
+
+.empty-label {
+  color: #e6007e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.empty-favorites h2 {
+  color: white;
+  font-size: 27px;
+  margin: 12px 0;
+}
+
+.empty-favorites p {
+  color: #777;
+  line-height: 1.7;
+  font-size: 14px;
+  max-width: 470px;
+  margin: auto;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+  .favorites-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .favorites-page {
+    padding: 35px 20px;
+  }
+
+  .favorites-header {
+    align-items: flex-start;
+  }
+
+  .favorites-title-section {
+    gap: 13px;
+  }
+
+  .favorites-title-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .favorites-header h1 {
+    font-size: 26px;
+  }
+
+  .favorites-header p {
+    font-size: 13px;
+  }
+
+  .favorites-count {
+    min-width: 55px;
+    padding: 10px;
+  }
+
+  .favorites-container {
+    grid-template-columns: 1fr;
+  }
+
+  .empty-favorites {
+    padding: 40px 25px;
+  }
+
+}
